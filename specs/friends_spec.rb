@@ -6,9 +6,9 @@ require_relative( '../friends' )
 
 class TestFriends < MiniTest::Test
 
-  def setup
+  def setup # it recreates the data over and over when different tests run.
 
-    @person1 = {
+    @person1 = { # person1 have 5 keys,
       name: "Shaggy",
       age: 12,
       monies: 1,
@@ -75,6 +75,10 @@ class TestFriends < MiniTest::Test
 
   # 2. For a given person, return their favourite tv show
   # (e.g. the function favourite_tv_show(@person2) should return the string "Baywatch")
+  def test_favourite_tv_show
+    result = get_tv_show(@person2)
+    assert_equal("Baywatch", result)
+  end
 
 
   # 3. For a given person, check if they like a particular food
