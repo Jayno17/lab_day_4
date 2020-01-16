@@ -31,3 +31,18 @@ def total_money(people)
 end
 return money
 end
+
+
+def lending_money(lender, lendee, amount)
+  lender[:monies] -= amount
+  lendee[:monies] += amount
+end
+
+
+def favourite_food(people)
+  foods = []
+  for person in people
+    foods +=  person[:favourites][:snacks]
+  end
+  return foods
+end
