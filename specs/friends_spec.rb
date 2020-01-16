@@ -98,7 +98,10 @@ class TestFriends < MiniTest::Test
 
   # 5. For a given person, remove a specific name from their list of friends
   # (hint: Same as above, testing for the length of the array should be sufficient)
-
+  def test_remove_friend
+    remove_friend(@person2, "Fred")
+    assert_equal(0,  @person2[:friends].length())
+  end
 
   # 6. Find the total of everyone's money
   # (hint: use the @people array, remember how we checked the total number of eggs yesterday?)
