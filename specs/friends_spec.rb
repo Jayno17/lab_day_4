@@ -126,5 +126,8 @@ def test_favourite_food
 end
   # 9. Find people with no friends
   # (hint: return an array, there might be more people in the future with no friends!)
-
+  def test_no_friends
+    nofriends = no_friends(@people)
+    assert_equal(["Daphne"], nofriends)
+  end
 end

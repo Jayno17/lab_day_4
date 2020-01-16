@@ -46,3 +46,14 @@ def favourite_food(people)
   end
   return foods
 end
+
+
+def no_friends(people)
+  nofriends = []
+  for person in people
+    if person[:friends].empty?
+    nofriends.push(person[:name])
+    end
+  end
+  return nofriends
+end
